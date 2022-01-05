@@ -1,2 +1,2 @@
 # SHEDMessage
-secure hash encrypt decrypt Messages
+Secure Hash Encrypt Decrypt Messages
