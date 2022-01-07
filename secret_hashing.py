@@ -1,9 +1,7 @@
 import hashlib
 import base64
 
-def main():
-    text = input('\n Input text to hash: ')
-    
+def main(text):
     #MD5
     md5 = hashlib.md5(text.encode())
     md5 = md5.hexdigest()
@@ -25,24 +23,7 @@ def main():
     print(' SHA256: '+sha256)
     print('')
     
-#    print(' 1.MD5 \n 2.Base64 \n 3.SHA1 \n 4.SHA256')
-#    has = input(' [1,2,3,4]: ')
-#    
-#    if has == '1':
-#        text = hashlib.md5(text.encode())
-#        text = text.hexdigest()
-#        print(' : '+text)
-#    elif has == '2':
-#        text = base64.b64encode(bytes(f'{text}', 'utf-8'))
-#        text = text.decode('utf-8')
-#        print(' : '+text)
-#    elif has == '3':
-#        text = hashlib.sha1(text.encode())
-#        text = text.hexdigest()
-#        print(' : '+text)
-#    elif has == '4':
-#        text = hashlib.sha256(text.encode())
-#        text = text.hexdigest()
-#        print(' : '+text)
-#    else:
-#        pass
+    
+if __name__ == '__main__':
+    text = input('\n Input text to hash: ')
+    main(text)
