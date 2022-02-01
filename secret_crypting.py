@@ -1,5 +1,7 @@
-#Encrypting
+
 def encrypt(key, msg):
+    # Encrypting
+    # Simple encryption function
     encryped = []
     for i, c in enumerate(msg):
         if c == ' ':
@@ -10,8 +12,10 @@ def encrypt(key, msg):
             encryped.append(chr((msg_c + key_c) % 127))
     return ''.join(encryped)
 
-#Decrypting
+
 def decrypt(key, encryped):
+    # Decrypting
+    # Simple decryption function
     msg = []
     for i, c in enumerate(encryped):
         if c == ' ':
@@ -42,5 +46,6 @@ def main():
     else:
         pass
 
+    
 if __name__ == '__main__':
     main()
